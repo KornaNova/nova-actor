@@ -7,7 +7,7 @@
             </div>
             <div class="modal-body">
                 <ul>
-                    @foreach(config('laravel-auth-switch.accounts') as $key=>$u)
+                    @foreach(config('auth-switch.accounts') as $key=>$u)
                         <li>
 
                             <a href="{{ route('login-as',$key) }}">

@@ -4,7 +4,6 @@ namespace Visanduma\LaravelAuthSwitch;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Visanduma\LaravelAuthSwitch\Commands\LaravelAuthSwitchCommand;
 
 class LaravelAuthSwitchServiceProvider extends PackageServiceProvider
 {
@@ -18,6 +17,7 @@ class LaravelAuthSwitchServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-auth-switch')
             ->hasConfigFile()
+            ->hasRoute('web')
             ->hasViews();
     }
 }
