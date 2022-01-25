@@ -10,7 +10,7 @@ class SwitchController extends Controller
 {
     public function __invoke($key)
     {
-        $this->middleware('web');
+       
         $model = config('auth-switch.model');
         $model = new $model();
         $users = config('auth-switch.accounts', []);
