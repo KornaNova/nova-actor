@@ -4,6 +4,8 @@ return [
 
     'username_column' => 'email',
 
+    'model' => \App\Models\User::class,
+
     'accounts' => [
         [
             'name' => 'Affiliate',
