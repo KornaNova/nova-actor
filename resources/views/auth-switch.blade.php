@@ -12,7 +12,7 @@
 
                             <a href="{{ route('login-as',$key) }}">
                                 <div class="as-block">
-                                    @if(auth()->check() && auth()->user()>email == $u['username'])
+                                    @if(auth()->check() && auth()->user()[config('auth-switch.username_column')] == $u['username'])
                                         <div class="as-online"></div>@endif
                                     {{ $u['name'] }}
                                     <p>{{ $u['username'] }}</p>
@@ -63,6 +63,7 @@
             bottom: 0;
             z-index: 99999;
             border: none;
+            margin: 12px;
         }
 
         /* The Modal (background) */
