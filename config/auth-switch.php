@@ -1,11 +1,16 @@
 <?php
-// config for Visanduma/LaravelAuthswitch
+
+
 return [
 
+    // username column of user table
     'username_column' => 'email',
 
+    // auth able user model
     'model' => \App\Models\User::class,
 
+    // switch able user accounts according to your user table
+    // use redirect_to field to redirect user after successfully logged in
     'accounts' => [
         [
             'name' => 'Affiliate',
@@ -16,17 +21,7 @@ return [
             'name' => 'Broker',
             'username' => 'dojyxisero@mailinator.com',
             'redirect_to' => 'brokers/dashboard'
-        ],
-        [
-            'name' => 'Seller',
-            'username' => 'alexie.runolqqwqwfsson@example.org',
-            'redirect_to' => 'affiliate/dashboard'
-        ],
-        [
-            'name' => 'Owner',
-            'username' => 'alexie.ruertertnolfsson@example.org',
-            'redirect_to' => 'affiliate/dashboard'
-        ],
+        ]
 
     ]
 ];
