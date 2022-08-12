@@ -18,6 +18,6 @@ class LaravelAuthSwitchServiceProvider extends PackageServiceProvider
             ->name('laravel-auth-switch')
             ->hasConfigFile()
             ->hasRoute('web')
-            ->hasViews();
+            ->hasViews('auth-switch');
     }
 }
