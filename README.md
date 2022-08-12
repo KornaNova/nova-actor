@@ -53,7 +53,7 @@ return [
 Include into any view where you need Auth Switching
 
 ```php
-@include('auth-switch::auth-switch');
+@include('auth-switch::button');
 ```
 
 ## Changelog
