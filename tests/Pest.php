@@ -1,5 +1,5 @@
 <?php
 
-use Visanduma\LaravelAuthSwitch\Tests\TestCase;
+use Visanduma\NovaActor\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

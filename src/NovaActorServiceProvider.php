@@ -1,11 +1,11 @@
 <?php
 
-namespace Visanduma\LaravelAuthSwitch;
+namespace Visanduma\NovaActor;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class LaravelAuthSwitchServiceProvider extends PackageServiceProvider
+class NovaActorServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -15,7 +15,7 @@ class LaravelAuthSwitchServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('laravel-auth-switch')
+            ->name('nova-actor')
             ->hasConfigFile()
             ->hasRoute('web')
             ->hasViews('auth-switch');

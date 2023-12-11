@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Visanduma\LaravelAuthSwitch;
+namespace Visanduma\NovaActor;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;

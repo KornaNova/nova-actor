@@ -1,10 +1,10 @@
 <?php
 
-namespace Visanduma\LaravelAuthSwitch\Tests;
+namespace Visanduma\NovaActor\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Visanduma\LaravelAuthSwitch\LaravelAuthSwitchServiceProvider;
+use Visanduma\NovaActor\NovaActorServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn(string $modelName) => 'Visanduma\\LaravelAuthSwitch\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn(string $modelName) => 'Visanduma\\NovaActor\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            LaravelAuthSwitchServiceProvider::class,
+            NovaActorServiceProvider::class,
         ];
     }
 
@@ -29,7 +29,7 @@ class TestCase extends Orchestra
         config()->set('database.default', 'testing');
 
         /*
-        $migration = include __DIR__.'/../database/migrations/create_laravel-auth-switch_table.php.stub';
+        $migration = include __DIR__.'/../database/migrations/create_nova-actor_table.php.stub';
         $migration->up();
         */
     }

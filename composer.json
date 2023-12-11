@@ -1,42 +1,39 @@
 {
-    "name": "visanduma/laravel-auth-switch",
+    "name": "visanduma/nova-actor",
     "description": "Simple user switch for development environment",
     "keywords": [
         "Visanduma",
         "laravel",
-        "laravel-auth-switch"
+        "nova-actor"
     ],
-    "homepage": "https://github.com/visanduma/laravel-auth-switch",
+    "homepage": "https://github.com/visanduma/nova-actor",
     "license": "MIT",
     "authors": [
         {
-            "name": "LaHiRu",
-            "email": "lahirulhr@gmail.com",
-            "role": "Developer"
+            "name": "Visanduma R&D",
+            "email": "info@visanduma.com"
         }
     ],
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^8.0",
         "spatie/laravel-package-tools": "^1.9.2",
-        "illuminate/contracts": "^8.0 | ^9.0"
+        "illuminate/contracts": "^9.0"
     },
     "require-dev": {
-        "nunomaduro/collision": "^5.10",
-        "orchestra/testbench": "^6.22",
+        "nunomaduro/collision": "^6.0",
         "pestphp/pest": "^1.21",
         "pestphp/pest-plugin-laravel": "^1.1",
-        "phpunit/phpunit": "^9.5",
-        "spatie/laravel-ray": "^1.26"
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
-            "Visanduma\\LaravelAuthSwitch\\": "src",
-            "Visanduma\\LaravelAuthSwitch\\Database\\Factories\\": "database/factories"
+            "Visanduma\\NovaActor\\": "src",
+            "Visanduma\\NovaActor\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Visanduma\\LaravelAuthSwitch\\Tests\\": "tests"
+            "Visanduma\\NovaActor\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -45,15 +42,18 @@
         "test-coverage": "vendor/bin/pest coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Visanduma\\LaravelAuthSwitch\\LaravelAuthSwitchServiceProvider"
+                "Visanduma\\NovaActor\\NovaActorServiceProvider"
             ],
             "aliases": {
-                "LaravelAuthSwitch": "Visanduma\\LaravelAuthSwitch\\Facades\\LaravelAuthSwitch"
+                "NovaActor": "Visanduma\\NovaActor\\Facades\\NovaActor"
             }
         }
     },

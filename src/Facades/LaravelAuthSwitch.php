@@ -1,16 +1,16 @@
 <?php
 
-namespace Visanduma\LaravelAuthSwitch\Facades;
+namespace Visanduma\NovaActor\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Visanduma\LaravelAuthSwitch\LaravelAuthSwitch
+ * @see \Visanduma\NovaActor\NovaActor
  */
-class LaravelAuthSwitch extends Facade
+class NovaActor extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'laravel-auth-switch';
+        return 'nova-actor';
     }
 }
