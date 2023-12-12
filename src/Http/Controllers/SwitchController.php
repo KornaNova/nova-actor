@@ -2,7 +2,6 @@
 
 namespace Visanduma\NovaActor\Http\Controllers;
 
-use App\Http\Middleware\AuthSwitch;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Visanduma\NovaActor\NovaActor;

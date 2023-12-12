@@ -19,12 +19,24 @@ class NovaActorTheatre
     {
         $response = $next($request);
 
-        if (! app()->environment(config('nova-actor.environments')) || NovaActor::list()->isEmpty() || !auth()->check()) {
+        if (! app()->environment(config('nova-actor.environments')) || NovaActor::list()->isEmpty() || ! auth()->check()) {
             return $response;
         }
 
         $body = $response->getContent();
 
+        $content = $this->renderView();
+
+        $body = str($body)->replace('</body>', $content.'</body>')
+            ->toString();
+
+        $response->setContent($body);
+
+        return $response;
+    }
+
+    private function renderView()
+    {
         $content = Blade::render('nova-actor::theatre', [
             'users' => NovaActor::list()->map(fn ($el) => [
                 ...$el,
@@ -33,11 +45,6 @@ class NovaActorTheatre
             ]),
         ]);
 
-        $body = str($body)->replace('</body>', $content.'</body>')
-            ->toString();
-
-        $response->setContent($body);
-
-        return $response;
+        return $content;
     }
 }

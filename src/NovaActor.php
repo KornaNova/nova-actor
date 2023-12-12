@@ -6,8 +6,8 @@ use Illuminate\Support\Collection;
 
 class NovaActor
 {
-    public static function list():Collection
+    public static function list(): Collection
     {
-        return collect(config('nova-actor.accounts',[]));
+        return collect(config('nova-actor.accounts', []));
     }
 }
