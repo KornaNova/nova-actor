@@ -10,15 +10,19 @@ return [
     // allowed environments
     'environments' => ['local'],
 
-    // switch able user accounts
-    'accounts' => [
-        /*
-        [
-            'name' => 'Super Admin',
-            'username' => 'super@visanduma.com',
-            'redirect_to' => '/nova/dashboards/main',  <--- Optional - redirect to this url after successfully login
-            'guard' => 'admin', <--- Optional - Auth guard
-        ],
-        */
-    ],
+
+    /*
+    | ------- Adding actors ------------------ |
+
+    create 'actors.json' file on project root directory. then create any number of entries as follow
+
+    {
+        "name" : "Super Admin",
+        "username" : "super@visanduma.com",
+        "redirect_to" : "/nova/dashboards/main",  <--- Optional - redirect to this url after successfully login
+        "guard" : "admin", <--- Optional - Auth guard
+    }
+    
+    */
+
 ];

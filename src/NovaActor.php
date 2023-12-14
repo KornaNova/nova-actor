@@ -8,6 +8,15 @@ class NovaActor
 {
     public static function list(): Collection
     {
-        return collect(config('nova-actor.accounts', []));
+        $file = base_path('actors.json');
+
+        if (file_exists($file)) {
+            $content = file_get_contents($file);
+        } else {
+            $content = '[]';
+        }
+
+        return collect(json_decode($content, true));
+
     }
 }
