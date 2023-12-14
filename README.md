@@ -44,24 +44,12 @@ return [
     // allowed environments
     'environments' => ['local'],
 
-    // switch able user accounts
-    'accounts' => [
-        /*
-        [
-            'name' => 'Super Admin',
-            'username' => 'super@visanduma.com',
-            'redirect_to' => '/nova/dashboards/main',  <--- Optional - redirect to this url after successfully login
-            'guard' => 'admin', <--- Optional - Auth guard
-        ],
-        */
-    ],
 ];
 ```
 
 ## Setup
 
 -   Update the `nova-actor.php` config file with your USER Model & column details
--   Add any number of users to `accounts` array
 -   Register the nova-actor middleware in `nova` config file
 
 ```php
@@ -75,6 +63,27 @@ return [
         ...
         \Visanduma\NovaActor\Http\Middlewares\NovaActorTheatre::class, // <-- Add this line
     ],
+```
+
+### Adding actors/users
+
+Create json file called `actors.json` in root level of the project. then add any user details as following structure.
+
+**Remember to add the `actors.json` file to `.gitignore`**
+
+```json
+[
+    {
+        "name": "Mallory Olsen",
+        "username": "nenojis@mailinator.com"
+    },
+    {
+        "name": "Super  Admin",
+        "username": "info@visanduma.com",
+        "redirect_to": "/nova/dashboards/main", // optional
+        "guard" : "admin" // optional
+    }
+]
 ```
 
 ## Customizing the view
