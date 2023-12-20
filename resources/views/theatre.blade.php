@@ -1,7 +1,7 @@
 <div>
     <button onclick="document.getElementById('amod').showModal();" title="Act as"
         class="floating-right-bottom-btn text-white  shadow  focus:ring bg-primary-500 hover:bg-primary-400 active:bg-primary-600 inline-flex items-center font-bold px-4 h-9 text-sm shrink-0 h-9 px-4 focus:outline-none ring-primary-200 dark:ring-gray-600 focus:ring inline-flex items-center font-bold">
-        <svg fill="white" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+        <svg fill="white" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 299.196 299.196" xml:space="preserve">
             <g>
                 <path d="M101.833,91.468c-4.882-4.882-4.882-12.796,0-17.678c3.915-3.915,9.781-4.682,14.469-2.316
